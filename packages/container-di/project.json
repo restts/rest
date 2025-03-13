@@ -1,0 +1,34 @@
+{
+  "name": "container-di",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/container-di/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/container-di",
+        "tsConfig": "packages/container-di/tsconfig.lib.json",
+        "packageJson": "packages/container-di/package.json",
+        "main": "packages/container-di/src/index.ts",
+        "assets": ["packages/container-di/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

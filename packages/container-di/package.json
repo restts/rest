@@ -1,0 +1,31 @@
+{
+  "name": "@restts/container-di",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "description": "Container DI for RestTS",
+  "author": "Rafael Nascimento <rafael.l.nascimento.oficial@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "restts",
+    "container",
+    "di",
+    "dependency",
+    "injection"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/restts/rest.git"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
