@@ -71,7 +71,7 @@ jobs:
           restore-keys: |
             cache-nx--
       - name: Run effected Lint
-        run: npx nx affected -t lint --parallel --configuration=ci
+        run: npx nx affected -t lint --parallel --configuration=ci --base=origin/main --head=${{ github.sha }}
 
   test:
     name: Test
@@ -101,4 +101,4 @@ jobs:
           restore-keys: |
             cache-nx-test--
       - name: Run effected Test
-        run: npx nx affected -t test --parallel
+        run: npx nx affected -t test --parallel --configuration=ci --base=origin/main --head=${{ github.sha }}
