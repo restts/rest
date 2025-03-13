@@ -26,6 +26,10 @@
     "!**/*.tsbuildinfo"
   ],
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/reflect-metadata": "^0.1.14"
   }
 }
