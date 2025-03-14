@@ -1,0 +1,28 @@
+{
+  "name": "@restts/monads",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "description": "Monads for RestTS",
+  "author": "Rafael Nascimento <rafael.l.nascimento.oficial@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "restts",
+    "monads"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/restts/rest.git"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -23,6 +23,15 @@
         "bump-patch-for-minor-pre-major": true,
         "draft": false,
         "prerelease": false
+      },
+      "packages/monads": {
+        "changelog-path": "CHANGELOG.md",
+        "package-name": "monads",
+        "initial-version": "0.1.0",
+        "bump-minor-pre-major": true,
+        "bump-patch-for-minor-pre-major": true,
+        "draft": false,
+        "prerelease": false
       }
     },
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
