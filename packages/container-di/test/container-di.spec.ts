@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import { Container } from '../src/lib/container';
 
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 class TestService {}
 
 class DependentService {
@@ -19,6 +20,7 @@ describe('Container', () => {
   it('should register and resolve a dependency', () => {
     Container.register('TestService', TestService);
     const instance = Container.resolve<TestService>('TestService');
+
     expect(instance).toBeInstanceOf(TestService);
   });
 
@@ -30,6 +32,7 @@ describe('Container', () => {
     Container.register('TestService', TestService);
     const instance1 = Container.resolve<TestService>('TestService');
     const instance2 = Container.resolve<TestService>('TestService');
+
     expect(instance1).toBe(instance2);
   });
 
@@ -39,6 +42,7 @@ describe('Container', () => {
     Container.register('DependentService', DependentService);
     
     const instance = Container.resolve<DependentService>('DependentService');
+
     expect(instance).toBeInstanceOf(DependentService);
     expect(instance.testService).toBeInstanceOf(TestService);
   });

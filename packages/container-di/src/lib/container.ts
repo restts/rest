@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class Container {
   private static readonly dependencies = new Map();
   private static readonly singletons = new Map();
@@ -29,6 +30,7 @@ export class Container {
     for (let i = 0; i < subDependencies.length; i++) {
       const { serviceName, index } = subDependencies[i];
       const service = this.resolve(serviceName);
+
       args.splice(index, 0, service);
     }
   
