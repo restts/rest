@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/restts/rest/compare/container-di-v0.1.1...container-di-v0.1.2) (2025-03-14)
+
+
+### Features
+
+* **lint:** add new rules ([#8](https://github.com/restts/rest/issues/8)) ([90a4109](https://github.com/restts/rest/commit/90a4109f320308c17102f3d61c5b448f160c178e))
+
 ## [0.1.1](https://github.com/restts/rest/compare/container-di-v0.1.0...container-di-v0.1.1) (2025-03-13)
 
 
