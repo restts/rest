@@ -31,7 +31,10 @@ jobs:
           cmd: jq '.["'"${{ steps.extract-key.outputs.package-key }}"'"]' ./.github/workflows/packages.json -r
 
   build-and-publish:
-    name: Build
+    name: Build and publish
+    permissions:
+      contents: read
+      id-token: write
     needs: [extract-package-infos]
     uses: ./.github/workflows/build-and-publish.yaml
     with:
